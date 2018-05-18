@@ -106,8 +106,6 @@ train_op = tf.train.AdamOptimizer(lr).minimize(cost)
 correct_pred = tf.equal(tf.argmax(pred, 1), tf.argmax(ys, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32))
 
-# init= tf.initialize_all_variables() # tf 马上就要废弃这种写法
-# 替换成下面的写法:
 lr = 0.001
 epoch = 50
 batch_size = 128
